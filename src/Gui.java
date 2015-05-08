@@ -12,6 +12,7 @@ import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
+import javax.swing.JButton;
 
 
 public class Gui extends JFrame
@@ -53,7 +54,7 @@ public class Gui extends JFrame
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(22, 12, 311, 116);
+		panel.setBounds(22, 12, 311, 179);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -78,9 +79,13 @@ public class Gui extends JFrame
 		holeSize.setBounds(149, 70, 125, 34);
 		panel.add(holeSize);
 		
+		JButton btnAddHole = new JButton("Add Hole");
+		btnAddHole.setBounds(12, 116, 262, 51);
+		panel.add(btnAddHole);
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setLayout(null);
-		panel_1.setBounds(22, 143, 311, 143);
+		panel_1.setBounds(22, 203, 311, 143);
 		contentPane.add(panel_1);
 		
 		JLabel lblChoose = new JLabel("Choose Allocation Method:");
@@ -97,12 +102,13 @@ public class Gui extends JFrame
 				return values[index];
 			}
 		});
-		allocationMethod.setBounds(22, 40, 251, 91);
+		allocationMethod.setSelectedIndex(0);
+		allocationMethod.setBounds(12, 40, 251, 91);
 		panel_1.add(allocationMethod);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setLayout(null);
-		panel_2.setBounds(22, 298, 311, 116);
+		panel_2.setBounds(22, 343, 311, 116);
 		contentPane.add(panel_2);
 		
 		JLabel lblAddNewProcess = new JLabel("Add New Process:");
@@ -120,6 +126,10 @@ public class Gui extends JFrame
 		JLabel lblPNumber = new JLabel("P0");
 		lblPNumber.setBounds(145, 12, 70, 15);
 		panel_2.add(lblPNumber);
+		
+		JButton btnAddProcess = new JButton("Add Process");
+		btnAddProcess.setBounds(142, 70, 157, 34);
+		panel_2.add(btnAddProcess);
 		
 		DrawerPanel panel_3 = new DrawerPanel();
 		panel_3.setBackground(Color.WHITE);
